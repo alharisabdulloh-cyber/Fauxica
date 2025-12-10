@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 50;
+  border-bottom: 1px solid #eee;
+}
+
+/* NAVIGATION */
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+  color: #555;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  background: #e5d9c0;
+  color: #1a1a1a;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #dfcfa9;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  height: 48px; 
+  padding: 0 4px; 
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: #555;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  max-width: 520px;
+  margin-bottom: 3rem;
+}
+
+.stat-card h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.hero-img {
+  display: grid;
+  grid-template-columns: 254px 254px;
+  grid-template-rows: 251px 251px;
+  gap: 24px;
+  justify-content: center;
+  align-items: start;
+}
+
+/* --- KOTAK BESAR DI KIRI --- */
+.hero-img .img1 {
+  grid-row: span 2;
+  width: 254px;
+  height: 531px;
+}
+
+/* --- KOTAK KECIL DI KANAN --- */
+.hero-img .img2,
+.hero-img .img3 {
+  width: 254px;
+  height: 251px;
+}
+
+/* --- CARD STYLE UMUM --- */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* --- GAMBAR DALAM CARD --- */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- INFO DI BAWAH GAMBAR --- */
+.card .info {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* --- TEKS DALAM INFO --- */
+.card .info h4 {
+  font-size: 0.9rem;
+  color: #111;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.card .info p {
+  font-size: 0.75rem;
+  color: #777;
+  line-height: 1.2;
+}
+
+.card .info span {
+  font-weight: 600;
+  color: #000;
+  font-size: 0.85rem;
+}
+
+/* --- RESPONSIVE SUPAYA RAPIH DI HP --- */
+@media (max-width: 600px) {
+  .hero-img {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .hero-img .img1,
+  .hero-img .img2,
+  .hero-img .img3 {
+    width: 100%;
+    height: auto;
+  }
+}
